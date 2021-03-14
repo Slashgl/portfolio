@@ -1,0 +1,36 @@
+.rating {
+    padding-top: 126px;
+    &__item {
+        display: grid;
+        grid-template: minmax(21px, auto) 14px /  315px 35px;
+        justify-content: space-between;
+        align-content:space-between;
+    }
+    &__wrapper {
+        display: grid;
+        grid-template: repeat(2, minmax(70px, auto)) / repeat(3, 350px);
+        column-gap: 45px;
+        row-gap: 30px;
+    }
+    &__line {
+        width: 350px;
+        height: 14px;
+        background: #E8E4DE;
+        border-radius: 4px;
+        span {
+            display: block;
+            height: 100%;
+            background-color: $main-color;
+        }
+        
+    }
+    &__circle {
+        position: relative;
+        @include before_circle;
+        &:before {
+            position: absolute;
+            top: -6px;
+            left: -13px;
+        }
+    }
+}

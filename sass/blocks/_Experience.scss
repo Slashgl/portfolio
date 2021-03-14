@@ -1,0 +1,104 @@
+.Experience {
+    
+    padding: 126px 75px 0 75px;
+    &__circle {
+        position: relative;
+        @include before_circle;
+        &:before {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__line {
+        position: relative;
+        @include line;
+        &:before {
+            left: 540px;
+            margin-top: 20px;
+        }
+    }
+    &__wrapper {
+        display: grid;
+        padding: 85px 65px 0 65px;
+        grid-template-columns: repeat(2, minmax(425px, auto));
+        grid-template-rows: repeat(2, minmax(129px));
+        column-gap: 186px;
+        row-gap: 45px;
+    }
+    &__item {
+        position: relative;
+        &::before {
+            content:'';
+            position: absolute;
+            top: 62px;
+            width: 44px;
+            height: 1px;
+            background-color:#000;
+        }
+        &-head {
+            position: relative;
+            padding: 45px 0 0 99px;
+            h4 {
+                margin-bottom: 0;
+            }
+        }
+        
+        &-location {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+        }
+        &-descr {
+            padding-left: 43px;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+            margin-top: 12px;
+        }
+        &-icon {
+            position: absolute;
+            top: 57px;
+            left: 60px;
+            
+            @include before_circle;
+            &:before {
+                top: -13px;
+                left: -16px;
+            }
+
+        }
+    }
+    &__column {
+        &-title {
+            position: relative;
+            padding-left: 35px;
+            &:before {
+                content:'';
+                position: absolute;
+                left: -7px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 15px;
+                height: 15px;
+                border-radius: 100%;
+                background: $main-color;
+            }
+        }
+        ul {
+            list-style-type: none;
+            li {
+                position: relative;
+                &:after {
+                    content:'';
+                    width: 1px;
+                    height: calc(100% + 16px);
+                    position: absolute;
+                    top: -16px;
+                    left: 0;
+                    background-color:#000000;
+                }
+            }
+        }
+    }
+}
+

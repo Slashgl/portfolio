@@ -1,0 +1,40 @@
+@mixin before_circle {
+    &:before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: -22%;
+        left: 0;
+        width: 36px;
+        height: 36px;
+        border-radius: 100%;
+        background: $main-color;
+    }
+}
+
+@mixin social_line {
+    &:before {
+        content:'';
+        position: absolute;
+        top: 50%;
+        left: 153px;
+        width: 70px;
+        height: 0px;
+        border: 1px solid #000000;
+        
+        background: #000000;
+    }
+}
+
+@mixin line {
+    &:before {
+        content:'';
+        position: absolute;
+        top: 50%;
+        left: 153px;
+        width: 70px;
+        height: 0px;
+        border: 1px solid $main-color;
+    }
+}
+
